@@ -1,7 +1,26 @@
-<h1>Counter</h1>
+<h1>Place Bid</h1>
 
-<p>This is a simple example of an Angular component.</p>
+<form [formGroup]="BidForm" (ngSubmit)="this[EventValue]()">
 
-<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
+  Ask:
+  <input type="text" formControlName="askformValue">
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+  <div *ngIf="submitted && BidForm.controls.askformValue.errors" class="text-danger">
+    <div *ngIf="BidForm.controls.askformValue.errors.required">Ask is required</div>
+  </div>
+  <br />
+  <br />
+  Bid:
+  <input type="text" formControlName="bidformValue">
+  <div *ngIf="submitted && BidForm.controls.bidformValue.errors" class="text-danger">
+    <div *ngIf="BidForm.controls.bidformValue.errors.required">Bid is required</div>
+
+  </div>
+
+  <br />
+  <br />
+  <button type="submit" class="btn btn-primary">Place Your Bid</button>
+
+
+</form>
+

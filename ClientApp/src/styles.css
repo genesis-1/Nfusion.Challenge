@@ -14,3 +14,122 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+/*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+select {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+  .table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+
+.table-sm td, .table-sm th {
+  padding: .3rem;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+  .table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-bordered thead th {
+    border-bottom-width: 2px;
+  }
+
+.table-hover tbody tr:hover {
+  color: #212529;
+  background-color: rgba(0,0,0,.075);
+}
+
+.table .thead-light th {
+  color: #495057;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+
+@media print {
+  *, ::after, ::before {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  .table {
+    border-collapse: collapse !important;
+  }
+
+    .table td, .table th {
+      background-color: #fff !important;
+    }
+
+  .table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6 !important;
+  }
+}

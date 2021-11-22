@@ -1,24 +1,25 @@
-<h1 id="tableLabel">Weather forecast</h1>
+<h1 id="tableLabel">Bid Tables</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
+<p *ngIf="!bidList"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
-  <thead>
+<table class="table table-hover table-sm table-bordered" aria-labelledby="tableLabel" *ngIf="bidList">
+  <thead class="thead-light" >
     <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
+      <th class="label symbol">Metal</th>
+      <th class="label symbol">Bid</th>
+      <th class="label symbol">Ask</th>
+      <th class="label symbol">Change</th>
+      <th class="label symbol">Change%</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
+    <tr *ngFor="let bidd of bidList">
+      <td class="symbol">{{ bidd.dataDto.symbol }}</td>
+      <td class="quote-field bid"><span class="value ">{{ bidd.dataDto.bid | currency:'USD'}}</span></td>
+      <td class="quote-field ask"><span class="value ">{{ bidd.dataDto.ask | currency:'USD' }}</span></td>
+      <td class="quote-field oneDayChange"><span class="value down">{{ bidd.dataDto.oneDayChange | number : '1.2-2' }}</span></td>
+      <td class="quote-field oneDayPercentChange"><span class="value down">{{ bidd.dataDto.oneDayPercentChange | number : '1.2-2' }}</span></td>
     </tr>
   </tbody>
 </table>

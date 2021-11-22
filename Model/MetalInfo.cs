@@ -11,6 +11,6 @@ namespace Nfusion.Challenge
         public string RequestedCurrency { get; set; }
         public string RequestedUnitOfMeasure { get; set; }
         public bool Success { get; set; }
-        public Metal Metal { get; set; }
+        public Data Data { get; set; }
     }
 }
